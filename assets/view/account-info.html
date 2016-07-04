@@ -1,0 +1,67 @@
+<div ng-include="'assets/html/header.html'"></div>
+
+<div id="account">
+
+    <div class="account-info container-fluid">
+        <div class="container">
+            <aside class="col-sm-3">
+                <nav class="sidebar-navigation container-fluid">
+                    <ul>
+                        <li><a href="#/account-info" class="active"><i class="fa fa-user" aria-hidden="true"></i>Account info</a></li>
+                        <li><a href="#/account-address"><i class="fa fa-location-arrow" aria-hidden="true"></i>Address</a></li>
+                        <li><a href="#/account-notifications"><i class="fa fa-bell" aria-hidden="true"></i>Notifications</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="col-sm-9">
+                <div class="title container-fluid">
+                    <h2>Account Information</h2>
+                </div>
+                <div class="content-info container-fluid">
+                    <!-- form do angular material -->
+                    <div class="col-sm-6">
+                        <md-input-container class="md-block">
+                            <label>E-Mail</label>
+                            <input ng-model="user.email" aria-hidden="true" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/">
+                            <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Your email must be between 10 and 100 characters long and look like an e-mail address.
+                                </div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Password</label>
+                            <input ng-model="user.password" aria-hidden="true" type="password">
+                        </md-input-container>
+                    </div>
+                </div>
+                <div class="title container-fluid">
+                    <h2>Personal information</h2>
+                </div>
+                <div class="content-info container-fluid">
+                    <!-- form do angular material -->
+                    <div class="col-sm-6">
+                        <md-input-container class="md-block">
+                            <label>First name</label>
+                            <input ng-model="user.firstname" aria-hidden="true">
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Last name</label>
+                            <input ng-model="user.lastname" aria-hidden="true">
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Phone</label>
+                            <input ng-model="user.phone" aria-hidden="true" type="number">
+                        </md-input-container>
+                    </div>
+                </div>
+                <div class="content-info container-fluid">
+                    <a href="" class="btn" ng-click="showSimpleToast()">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div ng-include="'assets/html/footer.html'"></div>

@@ -1,0 +1,110 @@
+<div ng-include="'assets/html/header.html'"></div>
+<div id="cart">
+
+    <div class="currently-cart container-fluid">
+        <div class="container-960">
+            <div class="container-fluid">
+                <div class="col-xs-12 tl">
+                    <h1>Currently in your bag</h1>
+                </div>
+            </div>
+
+            <div class="cart-inner container-fluid">
+                <div class="cart-header container-fluid">
+                    <div class="col-sm-12">
+                        <span><i class="fa fa-truck"></i> Order by <b>10pm</b> for delivery tomorrow</span>
+                    </div>
+                </div>
+
+                <div class="cart-itens-box container-fluid">
+                    <div class="col-xs-12 col-sm-3 item-photo">
+                        <img src="{{image_product1}}" />
+                    </div>
+                    <div class="col-xs-10 col-sm-4 item-details">
+                        <div class="container-fluid">
+                            <a href="#" class="product-name">{{title_product1}}</a>
+                        </div>
+                        <div class="container-fluid item-farm">
+                            <a href="#" class="farm-name">{{title_farm1}}</a>
+                        </div>
+                        <div class="container-fluid item-unit">
+                            <span class="unit">{{count_product1}} {{unit_product1}}</span>
+                        </div>
+                        <div class="container-fluid item-price">
+                            <span class="price">{{value1_product1 | currency}}</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 item-choice">
+                        <div class="col-xs-12 col-sm-12 no-padding-margin border_button ">
+                            <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer left">
+                                <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                {{total()}}
+                            </div>
+                            <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer right">
+                                <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        <div class="container-fluid item-total tc">
+                            <span class="total-price">{{value2_product1 | currency}}</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-1 tc item-remove">
+                        <a class="remove" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="bag-view-total container-fluid">
+                    <div class="col-sm-4">
+                        <form class="cart-dz">
+                            <input type="text" name="discount" placeholder="Discount Cupom">
+                            <input type="button" value="Ok" ng-click="showSimpleToast()"/>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 tr">
+                        <div class="col-xs-8 col-sm-10 no-padding">
+                            <span class="total-title">Subtotal:</span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 no-padding">
+                            <span class="total-price">{{value2_product1 * total() | currency}}</span>
+                        </div>
+                        <div class="col-xs-8 col-sm-10 no-padding">
+                            <span class="total-title">Delivery:</span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 no-padding">
+                            <span class="total-price">{{value1_delivery | currency }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-cart container-fluid">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-8 tr">
+                        <div class="col-xs-8 col-sm-10 no-padding">
+                            <span class="total-title">Total:</span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 no-padding">
+                            <span class="total-price">{{value2_product1 * total() -- value1_delivery | currency}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid secure">
+                <div class="col-xs-12 col-sm-6 tl">
+                    <span class="secure-checkout"><i class="fa fa-lock" aria-hidden="true"></i> Secure Checkout</span>
+                </div>
+                <div class="col-xs-12 col-sm-6 tr">
+                    <a href="#/checkout" class="btn"><i class="fa fa-check" aria-hidden="true"></i> Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div ng-include="'assets/html/footer.html'"></div>

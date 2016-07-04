@@ -1,0 +1,343 @@
+<div ng-include="'assets/html/header.html'"></div>
+<div class="breadcrumb container-fluid">
+    <div class="container">
+        <nav class="breadcrumb-nav col-xs-12">
+            <ul class="horizontal">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#" class="active">Vegetables</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div id="product">
+    <section class="product-description container-fluid">
+        <div class="container product-container">
+            <div class="col-sm-7 col-md-8 product-img">
+                <figure class="container-fluid">
+                    <img src="assets/img/p-orange.jpg" title="" />
+                </figure>
+            </div>
+            <div class="col-sm-5 col-md-4">
+                <div class="container-fluid">
+                    <h1>Small Hass Avocado Trio</h1>
+                </div>
+                <div class="price-compare">
+                    <p>From <span>$2.39</span> to <span>$4.99</span></p>
+                </div>
+                <div class="product-details">
+                    <div class="detail-container container-fluid">
+                        <div class="container-fluid">
+                            <div class="col-xs-6 no-padding">
+                                <a href="#" class="producer-link"><h2>Eatwell Farm</h2></a>
+                            </div>
+                            <div class="col-xs-6 no-padding right">
+                                <div class="right">
+                                    <div class="unit">
+                                        <p>10oz</p>
+                                    </div>
+                                    <span class="price">
+                                    <span class="dollar">6</span>
+                                    <span class="cents">99</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="col-xs-6 no-padding">
+
+                            </div>
+                            <div class="col-xs-6 no-padding">
+                                <div class="right">
+                                    <span class="price-per">$4.30 / lb</span>
+                                </div>
+                            </div>
+                            <div class="container-fluid products-control">
+                                <!-- colocar o seu contador -->
+                                <div class="col-sm-12">
+                                    <div class="col-xs-12 col-sm-12 no-padding-margin border_button ">
+                                        <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer left">
+                                            <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                            {{total()}}
+                                        </div>
+                                        <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer right">
+                                            <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-container">
+                        <div class="delivery-day">
+                            <div class="container-fluid">
+                                <h4>Farm Delivery Days</h4>
+                            </div>
+                            <ul>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i>Su</li>
+                                <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>Mo</li>
+                                <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>Tu</li>
+                                <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>We</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i>Th</li>
+                                <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>Fr</li>
+                                <li><i class="fa fa-circle" aria-hidden="true"></i>Sa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-container">
+                        <div class="certifieds">
+                            <div class="container-fluid">
+                                <h4>Certifieds</h4>
+                            </div>
+                            <nav>
+                                <ul class="horizontal">
+                                    <li><a href="#" target="_blank">Arrives</a></li>
+                                    <li><a href="#" target="_blank">Eco-Certified</a></li>
+                                    <li><a href="#" target="_blank">Organic</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-container">
+                        <div class="share">
+                            <div class="container-fluid">
+                                <h4>Share this product</h4>
+                            </div>
+                            <nav>
+                                <ul class="horizontal">
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section class="about container-fluid">
+        <!-- integrar as TABS do material design *como está no PSD* -->
+        <div class="container">
+            <div class="description container-fluid">
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="About the product">
+                        <md-content class="md-padding">
+                            <div class="col-sm-12">
+                                <h2>A favorite among</h2>
+                            </div>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p>A favorite among our tasting table donations to the local schools, our sweet tasting green peas even get kids excited about eating veggies. Try combining them with basil, olive oil, garlic, lemon juice, and Parmesan cheese for a fantastically simple pesto dish.</p>
+                            </div>
+                            <div class="benefits container-fluid">
+                                <div class="col-sm-12">
+                                    <h3>4 Benefits</h3>
+                                </div>
+                                <div class="benefits-content col-sm-4 col-sm-offset-2">
+                                    <div class="box container-fluid">
+                                        <span>1. Oranges contain phytochemicals that protect against cancer.</span>
+                                        <p>Oranges are rich in citrus limonoids, proven to help fight a number of varieties of cancer including that of the skin, lung, breast, stomach and colon.</p>
+                                    </div>
+                                    <div class="box container-fluid">
+                                        <span>2. Oranges contain phytochemicals that protect against cancer.</span>
+                                        <p>Oranges are rich in citrus limonoids, proven to help fight a number of varieties of cancer including that of the skin, lung, breast, stomach and colon.</p>
+                                    </div>
+                                </div>
+                                <div class="benefits-content col-sm-4">
+                                    <div class="box container-fluid">
+                                        <span>3. Oranges contain phytochemicals that protect against cancer.</span>
+                                        <p>Oranges are rich in citrus limonoids, proven to help fight a number of varieties of cancer including that of the skin, lung, breast, stomach and colon.</p>
+                                    </div>
+                                    <div class="box container-fluid">
+                                        <span>4. Oranges contain phytochemicals that protect against cancer.</span>
+                                        <p>Oranges are rich in citrus limonoids, proven to help fight a number of varieties of cancer including that of the skin, lung, breast, stomach and colon.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="About the producer">
+                        <md-content class="md-padding">
+
+                            <div class="about-producer container-fluid">
+                                <div class="col-sm-6">
+                                    <div class="box container-fluid">
+                                        <div style="float: left;">
+                                            <a href="#" style="display: block;">
+                                                <figure>
+                                                    <img src="http://goodeggs1.imgix.net/vendor_photo/llkTrn8QTGGCGCthGge9_tripledelightblueberries.jpg?w=182&h=130&fm=jpg&q=50&fit=crop&crop=faces" />
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="detail">
+                                            <a href="#" class="producer">Triple Delight</a>
+                                            <span class="from">Fresno, CA</span>
+                                            <p>Organic fruit grown by the world-renown David Mas Masumoto and his family in Fresno, CA.</p>
+                                            <a href="#" class="read-more">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="box container-fluid">
+                                        <div style="float: left;">
+                                            <a href="#" style="display: block;">
+                                                <figure>
+                                                    <img src="http://goodeggs1.imgix.net/vendor_photo/llkTrn8QTGGCGCthGge9_tripledelightblueberries.jpg?w=182&h=130&fm=jpg&q=50&fit=crop&crop=faces" />
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="detail">
+                                            <a href="#" class="producer">Triple Delight</a>
+                                            <span class="from">Fresno, CA</span>
+                                            <p>Organic fruit grown by the world-renown David Mas Masumoto and his family in Fresno, CA.</p>
+                                            <a href="#" class="read-more">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                       
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="may-like container-fluid">
+        <div class="container">
+            <div class="col-sm-12">
+                <h2>You may also like</h2>
+            </div>
+            <section class="col-xs-12 no-padding products-of-products">
+
+                <!--       PRODUCT 01-->
+                <div class="col-xs-6 col-sm-3">
+                    <div class="col-xs-11 col-sm-11 product_top" ng-hide="isSelected(1)">
+
+                        <h5>{{title_product1}}</h5>
+                        <h6>{{total_producer1}}</h6>
+                        <figure>
+                            <img src="{{image_product1}}" alt="{{title_product1}}">
+                        </figure>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(1)">
+                        <div class="col-sm-8 cols">
+                            <h5>{{count_product1}} {{unit_product1}}</h5>
+                            <h6>From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-4 cols" ng-show="total() < 1">
+                            <a href="" class="btn farm" ng-click="selectTab(1)">+ Farm</a>
+                        </div>
+                        <div class="col-sm-4 cols" ng-show="total() >= 1">
+                            <a href="" class="btn farm active" ng-click="selectTab(1)">{{total()}} added</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-11 col-sm-11 product_top_list" ng-show="isSelected(1)">
+                        <div class="col-sm-10 no-padding-margin cols">
+                            <h5>{{title_product1}}</h5>
+                            <h6><b>{{count_product_desc1}}</b> From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-2 no-padding-margin cols">
+                            <a href="" class="btn farm" ng-click="selectTab(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom_list" ng-show="isSelected(1)">
+
+                        <div class="col-xs-12 col-sm-12 no-padding-margin">
+                            <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                            <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
+                            <div class="col-xs-12 col-sm-12 no-padding-margin border_button">
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer cols">
+                                    <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                    {{total()}}
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 no-padding-margin">
+                            <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                            <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
+                            <div class="col-xs-12 col-sm-12 no-padding-margin border_button cols">
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                    {{total()}}
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--       PRODUCT 02-->
+
+                <div class="col-xs-6 col-sm-3">
+                    <div class="col-xs-11 col-sm-11 product_top">
+                        <h5>{{title_product2}}</h5>
+                        <h6 class="bottom_farm">{{value1_product2 | currency}} / lb - {{title_farm2}}</h6>
+                        <figure>
+                            <img src="{{image_product2}}" alt="{{title_product2}}">
+                        </figure>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(2)">
+                        <div class="col-sm-10">
+                            <h5>{{count_product2}}</h5>
+                            <h6><span>{{value1_product2 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="" class="btn farm circle" ng-click="selectTab(2)"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom" ng-show="isSelected(2)">
+                        <div class="col-sm-6">
+                            <h5>{{count_product2}}</h5>
+                            <h6><span>{{value1_product2 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-xs-12 col-sm-12 no-padding-margin border_button ">
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                    {{total()}}
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+</div>
+<div ng-include="'assets/html/footer.html'"></div>

@@ -1,0 +1,183 @@
+<div ng-include="'assets/html/header.html'"></div>
+<div class="breadcrumb container-fluid">
+    <div class="container">
+        <nav class="breadcrumb-nav col-xs-12">
+            <ul class="horizontal">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#" class="active">Avocado</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="container-fluid content-grey">
+    <div class="container">
+
+        <aside class="categories col-xs-12 col-sm-3">
+            <div class="container-fluid hidden-xs">
+                <h3>Categories</h3>
+            </div>
+            <nav class="sidebar-categories container-fluid hidden-xs">
+                <ul>
+                    <li><a href="#" class="active">Fruits</a><span>(37)</span></li>
+                    <li><a href="#">Vegetables</a><span>(22)</span></li>
+                    <li><a href="#">Greens</a><span>(9)</span></li>
+                    <li><a href="#">Herbs</a><span>(18)</span></li>
+                    <li><a href="#">Flowers</a><span>(10)</span></li>
+                    <li><a href="#">Dairy</a><span>(32)</span></li>
+                    <li><a href="#">Dried fruits and nuts</a><span>(5)</span></li>
+                </ul>
+            </nav>
+            <div class="col-sm-12 no-padding hidden-sm hidden-md hidden-lg">
+                <!-- integrar o form com do angular material -->
+                <form class="categories" method="get">
+                    <select name="category" onchange="location = this.value;">
+                        <option value="fruits.html" selected="selected" class="hidden">Categories</option>
+                        <option value="vegetables.html">Fruits</option>
+                        <option value="greens.html">Vegetables</option>
+                        <option value="herbs.html">Greens</option>
+                        <option value="flowers.html">Flowers</option>
+                        <option value="herbs.html">Herbs</option>
+                        <option value="dairy.html">Dairy</option>
+                        <option value="dried.html">HDried fruits and nuts</option>
+                    </select>
+                </form>
+            </div>
+        </aside>
+
+        <div class="col-xs-12 col-sm-9">
+            <div class="container-fluid">
+                <div class="col-xs-8 no-padding">
+                    <h2>8 products for "avocado"</h2>
+                </div>
+                <div class="col-xs-4 sortby no-padding">
+                    <p class="result-count hidden-xs">Showning all <b>8</b> products</p>
+                    <!-- integrar o form com do angular material -->
+                    <form class="sortby" method="get">
+                        <select name="orderby" class="orderby">
+                            <option value="" selected="selected" class="hidden">Sort By</option>
+                            <option value="">Popularity</option>
+                            <option value="price">Low to high</option>
+                            <option value="price-desc">High to low</option>
+                        </select>
+                    </form>
+                </div>
+                <section class="col-xs-12 no-padding products-view">
+
+                    <!--       PRODUCT 01-->
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="col-xs-11 col-sm-11 product_top" ng-hide="isSelected(1)">
+
+                            <h5>{{title_product1}}</h5>
+                            <h6>{{total_producer1}}</h6>
+                            <figure>
+                                <img src="{{image_product1}}" alt="{{title_product1}}">
+                            </figure>
+                        </div>
+                        <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(1)">
+                            <div class="col-sm-8 cols">
+                                <h5>{{count_product1}} {{unit_product1}}</h5>
+                                <h6>From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
+                            </div>
+                            <div class="col-sm-4 cols" ng-show="total() < 1">
+                                <a href="" class="btn farm" ng-click="selectTab(1)">+ Farm</a>
+                            </div>
+                            <div class="col-sm-4 cols" ng-show="total() >= 1">
+                                <a href="" class="btn farm active" ng-click="selectTab(1)">{{total()}} added</a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-11 col-sm-11 product_top_list" ng-show="isSelected(1)">
+                            <div class="col-sm-10 no-padding-margin cols">
+                                <h5>{{title_product1}}</h5>
+                                <h6><b>{{count_product_desc1}}</b> From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
+                            </div>
+                            <div class="col-sm-2 no-padding-margin cols">
+                                <a href="" class="btn farm" ng-click="selectTab(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-11 col-sm-11 product_bottom_list" ng-show="isSelected(1)">
+
+                            <div class="col-xs-12 col-sm-12 no-padding-margin">
+                                <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                                <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
+                                <div class="col-xs-12 col-sm-12 no-padding-margin border_button">
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer cols">
+                                        <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                        {{total()}}
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                        <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 no-padding-margin">
+                                <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                                <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
+                                <div class="col-xs-12 col-sm-12 no-padding-margin border_button cols">
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                        <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                        {{total()}}
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                        <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--       PRODUCT 02-->
+
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="col-xs-11 col-sm-11 product_top">
+                            <h5>{{title_product2}}</h5>
+                            <h6 class="bottom_farm">{{value1_product2 | currency}} / lb - {{title_farm2}}</h6>
+                            <figure>
+                                <img src="{{image_product2}}" alt="{{title_product2}}">
+                            </figure>
+                        </div>
+                        <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(2)">
+                            <div class="col-sm-10">
+                                <h5>{{count_product2}}</h5>
+                                <h6><span>{{value1_product2 | currency}}</span></h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="" class="btn farm circle" ng-click="selectTab(2)"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-11 col-sm-11 product_bottom" ng-show="isSelected(2)">
+                            <div class="col-sm-6">
+                                <h5>{{count_product2}}</h5>
+                                <h6><span>{{value1_product2 | currency}}</span></h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="col-xs-12 col-sm-12 no-padding-margin border_button ">
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                        <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                        {{total()}}
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                        <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div ng-include="'assets/html/footer.html'"></div>

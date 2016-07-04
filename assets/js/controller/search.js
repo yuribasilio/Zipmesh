@@ -1,4 +1,4 @@
-ngapp.controller("homeCTRL", function ($scope) {
+ngapp.controller("searchCTRL", function ($scope) {
 
 
     $scope.cart = 6;
@@ -23,12 +23,6 @@ ngapp.controller("homeCTRL", function ($scope) {
     $scope.value1_product2 = "2.39";
     $scope.value2_product2 = "4.99";
 
-    $scope.custom = true;
-    $scope.toggleManu = function(){
-        $scope.custom = $scope.custom === false ? true: false;
-    }
-
-
     $scope.invoice = {
         items: [{
             qty: 0,
@@ -43,7 +37,13 @@ ngapp.controller("homeCTRL", function ($scope) {
             cost: 0
         });
     }
-    
+
+    $scope.custom = true;
+    $scope.toggleManu = function(){
+        $scope.custom = $scope.custom === false ? true: false;
+    }
+
+
     $scope.removeItem = function(index) {
         $scope.invoice.items.splice(index, 1);
     }

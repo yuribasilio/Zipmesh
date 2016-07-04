@@ -1,0 +1,284 @@
+<div ng-include="'assets/html/header.html'"></div>
+
+<div id="checkout">
+
+    <div class="delivery-checkout container-fluid">
+        <div class="container-960">
+
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="01. Delivery">
+                        <md-content class="md-padding">
+
+                            <div class="header_bag-title container-fluid">
+                                <div class="col-sm-6 tl">
+                                    <h2>About you</h2>
+                                </div>
+                                <div class="col-sm-6 tr">
+                                    <p>Returning? <a href="#">Sign in</a></p>
+                                </div>
+                            </div>
+
+                            <div class="box-content-white container-fluid">
+                                <div class="col-sm-6">
+                                    <md-input-container class="md-block">
+                                        <label>First Name</label>
+                                        <input ng-model="user.firstname" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-6">
+                                    <md-input-container class="md-block">
+                                        <label>Last Name</label>
+                                        <input ng-model="user.lastname" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-6">
+                                    <md-input-container class="md-block">
+                                        <label>E-Mail</label>
+                                        <input ng-model="user.email" aria-hidden="true" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/">
+                                        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                                Your email must be between 10 and 100 characters long and look like an e-mail address.
+                                            </div>
+                                        </div>
+
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-6">
+                                    <md-input-container class="md-block">
+                                        <label>Phone</label>
+                                        <input ng-model="user.phone" aria-hidden="true" type="number">
+                                    </md-input-container>
+                                </div>
+                            </div>
+
+                            <div class="header_bag-title container-fluid">
+                                <div class="col-sm-6 tl">
+                                    <h2>Delivery Adress</h2>
+                                </div>
+                            </div>
+
+                            <div class="box-content-white container-fluid">
+                                <div class="col-sm-12">
+                                    <md-input-container class="md-block">
+                                        <label>Adress line 1</label>
+                                        <input ng-model="user.adress1" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-12">
+                                    <md-input-container class="md-block">
+                                        <label>Adress line 2</label>
+                                        <input ng-model="user.adress2" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-6">
+                                    <md-input-container class="md-block">
+                                        <label>Zip Code</label>
+                                        <input ng-model="user.zipcode" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-12">
+                                    <md-input-container class="md-block">
+                                        <label>Delivery Instructions</label>
+                                        <textarea ng-model="user.instructions" md-maxlength="300" rows="5" md-select-on-focus></textarea>
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="we-deliver tl container-fluid">
+                                        <span><i class="fa fa-truck" aria-hidden="true"></i> We delivery at your doorstep!</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer_bag-checkout container-fluid">
+                                <div class="col-sm-6 tl">
+                                    <span class="secure"><i class="fa fa-lock" aria-hidden="true"></i> Secure Checkout</span>
+                                </div>
+                                <div class="col-sm-6 tr">
+                                    <a href="#/cart" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to bag</a>
+                                    <a href="#checkout-payment" class="btn check">Proceed to Checkout</a>
+                                </div>
+                            </div>
+
+
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="02. Payment">
+                        <md-content class="md-padding">
+
+                            <div class="header_bag-title container-fluid">
+                                <div class="col-sm-6 tl">
+                                    <h2>Payment</h2>
+                                </div>
+                                <div class="col-sm-6 tr">
+                                    <p><img src="assets/img/payment-methods.png" /></p>
+                                </div>
+                            </div>
+
+                            <div class="box-content-white container-fluid">
+                                <div class="col-sm-6">
+                                    <md-input-container class="md-block">
+                                        <label>Card Number</label>
+                                        <input ng-model="payment.card" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-3">
+                                    <md-input-container class="md-block">
+                                        <label>MM/YY</label>
+                                        <input ng-model="payment.date" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                                <div class="col-sm-3">
+                                    <md-input-container class="md-block">
+                                        <label>CVC</label>
+                                        <input ng-model="payment.cvc" aria-hidden="true">
+                                    </md-input-container>
+                                </div>
+                            </div>
+
+                            <div class="footer_bag-checkout container-fluid">
+                                <div class="col-sm-6 tl">
+                                    <span class="secure"><i class="fa fa-lock" aria-hidden="true"></i> Secure Checkout</span>
+                                </div>
+                                <div class="col-sm-6 tr">
+                                    <a href="#/cart" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to bag</a>
+                                    <a href="#" class="btn check">Confirm Order</a>
+                                </div>
+                            </div>
+
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="03. Review">
+                        <md-content class="md-padding review-checkout">
+
+                            <div class="header_bag-title container-fluid">
+                                <div class="col-sm-6 tl">
+                                    <h2>Order Details</h2>
+                                </div>
+                            </div>
+
+                            <div class="box-content-white container-fluid">
+                                <div class="header_details-title container-fluid">
+                                    <div class="col-sm-12">
+                                        <span><i class="fa fa-truck" aria-hidden="true"></i> Estimated delivery day <b>Tuesday 28th July  2016</b></span>
+                                    </div>
+                                </div>
+
+                                <div class="currently-cart container-fluid">
+                                    <div class="cart-inner container-fluid">
+                                        <div class="cart-itens-box container-fluid">
+                                            <div class="col-xs-12 col-sm-3 item-photo">
+                                                <img src="assets/img/p-orange.jpg" />
+                                            </div>
+                                            <div class="col-xs-10 col-sm-4 item-details">
+                                                <div class="container-fluid">
+                                                    <a href="#" class="product-name">Samall Has Avocado Trio</a>
+                                                </div>
+                                                <div class="container-fluid item-farm">
+                                                    <a href="#" class="farm-name">Eatwell Farm</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-1 item-number tc">
+                                                <span class="number-products">7</span>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <div class="container-fluid item-unit-price tc">
+                                                    <span class="unit">2 oz</span>
+                                                    <span class="price">$2.99</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <div class="container-fluid item-total tr">
+                                                    <span class="total-price">$24.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-itens-box container-fluid">
+                                            <div class="col-xs-12 col-sm-3 item-photo">
+                                                <img src="assets/img/p-orange.jpg" />
+                                            </div>
+                                            <div class="col-xs-10 col-sm-4 item-details">
+                                                <div class="container-fluid">
+                                                    <a href="#" class="product-name">Samall Has Avocado Trio</a>
+                                                </div>
+                                                <div class="container-fluid item-farm">
+                                                    <a href="#" class="farm-name">Eatwell Farm</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-1 item-number tc">
+                                                <span class="number-products">7</span>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <div class="container-fluid item-unit-price tc">
+                                                    <span class="unit">2 oz</span>
+                                                    <span class="price">$2.99</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <div class="container-fluid item-total tr">
+                                                    <span class="total-price">$24.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bag-view-total container-fluid">
+                                            <div class="col-sm-4">
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 tr">
+                                                <div class="col-xs-8 col-sm-10 no-padding">
+                                                    <span class="total-title">Subtotal:</span>
+                                                </div>
+                                                <div class="col-xs-4 col-sm-2 no-padding">
+                                                    <span class="total-price">$95.00</span>
+                                                </div>
+                                                <div class="col-xs-8 col-sm-10 no-padding">
+                                                    <span class="total-title">Delivery:</span>
+                                                </div>
+                                                <div class="col-xs-4 col-sm-2 no-padding">
+                                                    <span class="total-price">$7.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="total-cart container-fluid">
+                                            <div class="col-sm-4">
+                                            </div>
+                                            <div class="col-sm-8 tr">
+                                                <div class="col-xs-8 col-sm-10 no-padding">
+                                                    <span class="total-title">Total:</span>
+                                                </div>
+                                                <div class="col-xs-4 col-sm-2 no-padding">
+                                                    <span class="total-price">$102.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer_bag-checkout container-fluid">
+                                <div class="col-sm-6 tl">
+                                    <span class="secure"><i class="fa fa-lock" aria-hidden="true"></i> Secure Checkout</span>
+                                </div>
+                                <div class="col-sm-6 tr">
+                                    <a href="#" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to bag</a>
+                                    <a href="#" class="btn check">Confirm Order</a>
+                                </div>
+                            </div>
+
+
+
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<div ng-include="'assets/html/footer.html'"></div>

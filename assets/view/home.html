@@ -108,46 +108,44 @@
             <h2>New & In Season</h2>
         </div>
 
-        
+
         <!--       PRODUCT 01-->
-              <div class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-3">
             <div class="col-xs-11 col-sm-11 product_top" ng-hide="isSelected(1)">
-          
-                    <h5>{{title_product1}}</h5>
+
+                <h5>{{title_product1}}</h5>
                 <h6>{{total_producer1}}</h6>
                 <figure>
                     <img src="{{image_product1}}" alt="{{title_product1}}">
                 </figure>
             </div>
             <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(1)">
-                <div class="col-sm-8">
+                <div class="col-sm-7 cols">
                     <h5>{{count_product1}} {{unit_product1}}</h5>
-                    <h6>From <span>${{value1_product1}}</span> to <span>${{value2_product1}}</span></h6>
+                    <h6>From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
                 </div>
-                <div class="col-sm-3" ng-show="total() < 1">
+                <div class="col-sm-5 cols" ng-show="total() < 1">
                     <a href="" class="btn farm" ng-click="selectTab(1)">+ Farm</a>
                 </div>
-                <div class="col-sm-3" ng-show="total() >= 1">
+                <div class="col-sm-5 cols" ng-show="total() >= 1">
                     <a href="" class="btn farm active" ng-click="selectTab(1)">{{total()}} added</a>
                 </div>
-                  </div>
+            </div>
 
-            <!--                        <div class="col-xs-11 col-sm-11 product_top_list">-->
             <div class="col-xs-11 col-sm-11 product_top_list" ng-show="isSelected(1)">
                 <div class="col-sm-10 no-padding-margin">
                     <h5>{{title_product1}}</h5>
-                    <h6><b>{{count_product_desc1}}</b> From <span>${{value1_product1}}</span> to <span>${{value2_product1}}</span></h6>
+                    <h6><b>{{count_product_desc1}}</b> From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
                 </div>
                 <div class="col-sm-2 no-padding-margin">
                     <a href="" class="btn farm" ng-click="selectTab(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <!--                        <div class="col-xs-11 col-sm-11 product_bottom_list">-->
             <div class="col-xs-11 col-sm-11 product_bottom_list" ng-show="isSelected(1)">
 
                 <div class="col-xs-12 col-sm-12 no-padding-margin">
-                    <h6>{{title_farm1}} <span>${{value1_product1}}</span></h6>
-                    <h6 class="bottom_farm">${{value1_product1}} / lb</h6>
+                    <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                    <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
                     <div class="col-xs-12 col-sm-12 no-padding-margin border_button">
                         <div class="col-xs-4 col-sm-4 no-padding-margin">
                             <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
@@ -161,8 +159,8 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 no-padding-margin">
-                    <h6>{{title_farm1}} <span>${{value1_product1}}</span></h6>
-                    <h6 class="bottom_farm">${{value1_product1}} / lb</h6>
+                    <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                    <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
                     <div class="col-xs-12 col-sm-12 no-padding-margin border_button">
                         <div class="col-xs-4 col-sm-4 no-padding-margin">
                             <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
@@ -179,31 +177,31 @@
             </div>
         </div>
 
-      <!--       PRODUCT 02-->
-              
+        <!--       PRODUCT 02-->
+
         <div class="col-xs-6 col-sm-3">
             <div class="col-xs-11 col-sm-11 product_top">
                 <h5>{{title_product2}}</h5>
-                <h6 class="bottom_farm">${{value1_product2}} / lb - {{title_farm2}}</h6>
+                <h6 class="bottom_farm">{{value1_product2 | currency}} / lb - {{title_farm2}}</h6>
                 <figure>
                     <img src="{{image_product2}}" alt="{{title_product2}}">
                 </figure>
             </div>
             <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(2)">
-                <div class="col-sm-10">
+                <div class="col-sm-10 cols">
                     <h5>{{count_product2}}</h5>
-                    <h6><span>${{value1_product2}}</span></h6>
+                    <h6><span>{{value1_product2 | currency}}</span></h6>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 cols">
                     <a href="" class="btn farm circle" ng-click="selectTab(2)"><i class="fa fa-plus" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="col-xs-11 col-sm-11 product_bottom" ng-show="isSelected(2)">
-                <div class="col-sm-6">
+                <div class="col-sm-6 cols">
                     <h5>{{count_product2}}</h5>
-                    <h6><span>${{value1_product2}}</span></h6>
+                    <h6><span>{{value1_product2 | currency}}</span></h6>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 cols">
                     <div class="col-xs-12 col-sm-12 no-padding-margin border_button">
                         <div class="col-xs-4 col-sm-4 no-padding-margin">
                             <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
@@ -218,7 +216,6 @@
 
                 </div>
             </div>
-            
         </div>
 
 

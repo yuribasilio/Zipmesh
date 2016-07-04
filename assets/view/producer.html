@@ -1,0 +1,187 @@
+<div ng-include="'assets/html/header.html'"></div>
+<div class="breadcrumb container-fluid">
+    <div class="container">
+        <nav class="breadcrumb-nav col-xs-12">
+            <ul class="horizontal">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Producer</a></li>
+                <li><a href="#" class="active">St. John Family Farms</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<section class="producer container-fluid">
+    <div class="container">
+        <div class="producer-content container-fluid">
+            <div class="col-xs-12 col-sm-4">
+                <figure>
+                    <img src="http://goodeggs1.imgix.net/vendor_photo/YUbfTy7vSuegmcUqc9Ba_IMG_1907.jpg?w=385&h=385&fm=jpg&q=41&fit=crop&crop=faces" />
+                </figure>
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <h1>St. John Family Farms</h1>
+                <p>I used to eat traditional pastas and rices several days a week. In the Spring of 2014, I decided to make a change and try the Paleo diet. The first thing I started making while on the new diet was cauliflower “rice." It was tasty, healthy, and had the utility of rice without the guilt. After having success with the rice, I began making veggie noodles. In no time, vegetables became the main ingredient in many of my dishes.</p>
+
+                <p>Unfortunately, making the noodles and rices was laborious, messy, and resulted in a lot of waste. I wished I could go to the grocery store and pick up a pre-packaged, ready-to-eat veggie noodle.</p>
+                <div class="col-sm-4 no-padding">
+                    <div class="detail-producer container-fluid">
+                        <div class="widget">
+                            <div class="widget-container">
+                                <div class="delivery-day">
+                                    <div class="container-fluid">
+                                        <h4>Farm Delivery Days</h4>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>Su</li>
+                                        <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>Mo</li>
+                                        <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>Tu</li>
+                                        <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>We</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>Th</li>
+                                        <li class="active"><i class="fa fa-circle" aria-hidden="true"></i>Fr</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>Sa</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="detail-producer container-fluid">
+                        <h4>From</h4>
+                        <span>San Francico, CA</span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="detail-producer container-fluid">
+                        <h4>Site</h4>
+                        <span><a href="#">www.stjohnfamilyfram.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-producer container-fluid">
+    <div class="container">
+        <div class="col-sm-12">
+            <h2>Products</h2>
+            <section class="col-xs-12 no-padding products-producer">
+
+                <!--       PRODUCT 01-->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-xs-11 col-sm-11 product_top" ng-hide="isSelected(1)">
+
+                        <h5>{{title_product1}}</h5>
+                        <h6>{{total_producer1}}</h6>
+                        <figure>
+                            <img src="{{image_product1}}" alt="{{title_product1}}">
+                        </figure>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(1)">
+                        <div class="col-sm-9 cols">
+                            <h5>{{count_product1}} {{unit_product1}}</h5>
+                            <h6>From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-3 cols" ng-show="total() < 1">
+                            <a href="" class="btn farm" ng-click="selectTab(1)">+ Farm</a>
+                        </div>
+                        <div class="col-sm-3 cols" ng-show="total() >= 1">
+                            <a href="" class="btn farm active" ng-click="selectTab(1)">{{total()}} added</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-11 col-sm-11 product_top_list" ng-show="isSelected(1)">
+                        <div class="col-sm-10 no-padding-margin">
+                            <h5>{{title_product1}}</h5>
+                            <h6><b>{{count_product_desc1}}</b> From <span>{{value1_product1 | currency}}</span> to <span>{{value2_product1 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-2 no-padding-margin">
+                            <a href="" class="btn farm" ng-click="selectTab(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom_list" ng-show="isSelected(1)">
+
+                        <div class="col-xs-12 col-sm-12 no-padding-margin">
+                            <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                            <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
+                            <div class="col-xs-12 col-sm-12 no-padding-margin border_button">
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                    {{total()}}
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 no-padding-margin">
+                            <h6>{{title_farm1}} <span>{{value1_product1 | currency}}</span></h6>
+                            <h6 class="bottom_farm">{{value1_product1 | currency}} / lb</h6>
+                            <div class="col-xs-12 col-sm-12 no-padding-margin border_button">
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer cols">
+                                    {{total()}}
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer cols">
+                                    <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--       PRODUCT 02-->
+
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-xs-11 col-sm-11 product_top">
+                        <h5>{{title_product2}}</h5>
+                        <h6 class="bottom_farm">{{value1_product2 | currency}} / lb - {{title_farm2}}</h6>
+                        <figure>
+                            <img src="{{image_product2}}" alt="{{title_product2}}">
+                        </figure>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom" ng-hide="isSelected(2)">
+                        <div class="col-sm-10 cols">
+                            <h5>{{count_product2}}</h5>
+                            <h6><span>{{value1_product2 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-2 cols">
+                            <a href="" class="btn farm circle" ng-click="selectTab(2)"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 col-sm-11 product_bottom" ng-show="isSelected(2)">
+                        <div class="col-sm-6">
+                            <h5>{{count_product2}}</h5>
+                            <h6><span>{{value1_product2 | currency}}</span></h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-xs-12 col-sm-12 no-padding-margin border_button ">
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer left" ng-click="removeItem()"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin count_farmer">
+                                    {{total()}}
+                                </div>
+                                <div class="col-xs-4 col-sm-4 no-padding-margin button_farmer">
+                                    <a href="" class="btn farmer right" ng-click="addItem()"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+</section>
+
+
+<div ng-include="'assets/html/footer.html'"></div>

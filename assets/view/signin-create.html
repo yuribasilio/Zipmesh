@@ -1,0 +1,65 @@
+<div ng-include="'assets/html/header.html'"></div>
+
+<div id="signin">
+
+    <div class="create-account container-fluid">
+        <div class="container">
+            <div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+                <div class="box-content-white container-fluid">
+
+                    <div class="header_details-title tc container-fluid">
+                        <div class="col-sm-12">
+                            <h1>Creating account</h1>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="container-fluid">
+                            <form>
+                                <!-- formulario do material design -->
+                                <md-input-container class="md-block">
+                                    <label>First name</label>
+                                    <input ng-model="user.firstname" aria-hidden="true">
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>Last name</label>
+                                    <input ng-model="user.lastname" aria-hidden="true">
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>E-Mail</label>
+                                    <input ng-model="user.email" aria-hidden="true" type="email">
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>Password</label>
+                                    <input ng-model="user.password" aria-hidden="true" type="password">
+                                </md-input-container>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>By Clicking “Register” below, you are agreeing to the ZipMesh <a href="#">Terms and Conditions and Privacy Policy.</a></p><br>
+                    </div>
+
+                    <div class=" col-xs-12">
+                        <a href="#" class="btn signin"> Create Account</a>
+                        <a href="#" class="btn facebook"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Connect with facebook</span></a>
+                    </div>
+
+                    <div class="col-xs-12 create-forgot tc">
+                        <p>Signin up will allow your friends to find you on ZipMesh. We'll never post without your permission.</p>
+                    </div>
+
+                    <div class="col-xs-12 create-forgot tl">
+                        <p><a href="#/signin-login">Back to Sign in</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div ng-include="'assets/html/footer.html'"></div>

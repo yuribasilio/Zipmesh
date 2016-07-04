@@ -1,4 +1,4 @@
-ngapp.controller("homeCTRL", function ($scope) {
+ngapp.controller("categoryCTRL", function ($scope) {
 
 
     $scope.cart = 6;
@@ -22,12 +22,11 @@ ngapp.controller("homeCTRL", function ($scope) {
     $scope.title_farm2 = "Eatwell Farm";
     $scope.value1_product2 = "2.39";
     $scope.value2_product2 = "4.99";
-
+   
     $scope.custom = true;
     $scope.toggleManu = function(){
         $scope.custom = $scope.custom === false ? true: false;
     }
-
 
     $scope.invoice = {
         items: [{

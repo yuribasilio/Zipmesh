@@ -1,0 +1,52 @@
+<div ng-include="'assets/html/header.html'"></div>
+
+<div id="account">
+
+    <div class="account-info container-fluid">
+        <div class="container">
+            <aside class="col-sm-3">
+                <nav class="sidebar-navigation container-fluid">
+                    <ul>
+                        <li><a href="#/account-info"><i class="fa fa-user" aria-hidden="true"></i>Account info</a></li>
+                        <li><a href="#/account-address"><i class="fa fa-location-arrow" aria-hidden="true"></i>Address</a></li>
+                        <li><a href="#/account-notifications" class="active"><i class="fa fa-bell" aria-hidden="true"></i>Notifications</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="col-sm-9">
+                <div class="title container-fluid">
+                    <h2>Notifications</h2>
+                </div>
+                <div class="content-info container-fluid">
+                    <!-- form do angular material -->
+                    <div class="col-sm-4">
+                        <md-switch ng-model="true" aria-label="Switch 1">
+                            Consumer notification 1
+                        </md-switch>
+                    </div>
+                    <div class="col-sm-4">
+                        <md-switch ng-model="false" aria-label="Switch 2">
+                            Consumer notification 2
+                        </md-switch>
+                    </div>
+                    <div class="col-sm-4">
+                        <md-switch ng-disabled="true" aria-label="Switch 3">
+                            Consumer notification 3
+                        </md-switch>
+                    </div>
+                    <div class="col-sm-4">
+                        <md-switch ng-model="data.cb4" aria-label="Switch 4">
+                            Consumer notification 4
+                        </md-switch>
+                    </div>
+                </div>
+                <div class="content-info container-fluid">
+                    <a href="" class="btn" ng-click="showSimpleToast()">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div ng-include="'assets/html/footer.html'"></div>

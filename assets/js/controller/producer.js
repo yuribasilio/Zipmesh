@@ -1,4 +1,4 @@
-ngapp.controller("homeCTRL", function ($scope) {
+ngapp.controller("producerCTRL", function ($scope) {
 
 
     $scope.cart = 6;
